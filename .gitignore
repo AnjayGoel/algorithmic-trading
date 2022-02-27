@@ -1,0 +1,7 @@
+.idea/
+strategies_notebooks
+__pycache__
+images
+temp.*
+/random/
+random_stuff.py

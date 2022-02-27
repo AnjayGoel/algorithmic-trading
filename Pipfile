@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+numpy = "*"
+pandas = "*"
+jupyter = "*"
+scipy = "*"
+scikit-learn = "*"
+matplotlib = "*"
+requests = "*"
+hurst = "*"
+statsmodels = "*"
+tabulate = "*"
+ipynb = "*"
+arch = "*"
+pykalman = "*"
+filterpy = "*"
+nsepy = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3"
