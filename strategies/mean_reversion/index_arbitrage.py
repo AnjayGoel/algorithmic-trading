@@ -1,12 +1,10 @@
 # In[ ]
-import math
 
 from matplotlib import pyplot as plt
 from statsmodels.tsa.stattools import coint
 
-from strategies.mean_reversion.cointegration import adf_test, const_beta_pair_mean_reversion_strategy, \
-    johansen_cointegration
-from strategies.utils import *
+from .cointegration import adf_test, const_beta_pair_mean_reversion_strategy
+from ..utils import *
 
 
 # In[ ]

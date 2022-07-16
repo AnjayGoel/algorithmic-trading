@@ -1,14 +1,14 @@
 # In[ ]:
 import os
 from pathlib import Path
-
+import random
 import matplotlib.pyplot as plt
 import scipy
 import scipy.stats
 from arch.unitroot import VarianceRatio
 from statsmodels.tsa.stattools import *
 
-from strategies.utils import *
+from ..utils import *
 
 
 # In[ ]:

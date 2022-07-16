@@ -5,8 +5,8 @@ from pathlib import Path
 from matplotlib import pyplot as plt
 from pykalman import KalmanFilter
 
-from strategies.mean_reversion.adf_and_hurst import adf_test
-from strategies.utils import *
+from ..mean_reversion.adf_and_hurst import adf_test
+from ..utils import *
 
 
 # In[ ]

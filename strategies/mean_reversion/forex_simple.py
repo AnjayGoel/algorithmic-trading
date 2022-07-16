@@ -1,9 +1,9 @@
 # In[ ]
 import matplotlib.pyplot as plt
 
-from strategies.mean_reversion.adf_and_hurst import adf_test
-from strategies.mean_reversion.dynamic_hedge_ratio import calculate_beta_ols, dynamic_beta_mean_reversion_strategy
-from strategies.utils import *
+from .adf_and_hurst import adf_test
+from .dynamic_hedge_ratio import calculate_beta_ols, dynamic_beta_mean_reversion_strategy
+from ..utils import *
 
 
 # In[ ]

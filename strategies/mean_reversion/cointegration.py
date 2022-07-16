@@ -4,8 +4,8 @@ import os
 import matplotlib.pyplot as plt
 from statsmodels.tsa.vector_ar.vecm import coint_johansen
 
-from strategies.mean_reversion.adf_and_hurst import adf_test
-from strategies.utils import *
+from .adf_and_hurst import adf_test
+from ..utils import *
 
 
 # In[ ]:

@@ -1,15 +1,11 @@
 # In[ ]
-import datetime
-from datetime import date
-from nsepy import get_history
-from tabulate import tabulate
-import pandas as pd
-import numpy as np
-from functools import reduce
 import os
-from strategies.utils import *
-import pathlib
+from datetime import date
+
 import requests
+from nsepy import get_history
+
+from strategies.utils import *
 
 
 # In[ ]

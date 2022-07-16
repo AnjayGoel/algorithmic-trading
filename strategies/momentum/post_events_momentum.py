@@ -1,7 +1,7 @@
 # In[ ]
 from matplotlib import pyplot as plt
-
-from strategies.data_download import *
+import datetime
+from ..data_download import *
 
 
 # In[ ]

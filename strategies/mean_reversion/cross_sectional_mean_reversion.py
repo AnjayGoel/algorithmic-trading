@@ -1,7 +1,7 @@
 # In[ ]
 from matplotlib import pyplot as plt
 
-from strategies.utils import *
+from ..utils import *
 
 
 # In[ ]

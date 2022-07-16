@@ -1,5 +1,5 @@
 # In[ ]:
-from strategies.momentum.momentum_testing import *
+from .momentum_testing import *
 
 eps = 10 ** -10
 

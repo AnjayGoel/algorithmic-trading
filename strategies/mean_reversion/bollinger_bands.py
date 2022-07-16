@@ -4,8 +4,8 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 
-from strategies.mean_reversion.cointegration import adf_test, johansen_cointegration
-from strategies.utils import *
+from .cointegration import adf_test, johansen_cointegration
+from ..utils import *
 
 
 # In[ ]:

@@ -3,7 +3,7 @@
 import matplotlib.pyplot as plt
 from scipy.stats import pearsonr
 
-from strategies.utils import *
+from ..utils import *
 
 
 # In[ ]
