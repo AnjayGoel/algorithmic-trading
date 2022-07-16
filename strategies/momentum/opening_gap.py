@@ -4,7 +4,7 @@ from .momentum_testing import *
 
 
 # In[]
-def opening_gap_strategy(df: pd.DataFrame, z_entry_score=0.1, rolling_window=90):
+def opening_gap_strategy(df: pd.DataFrame, z_entry_score=0.1, rolling_window=90, show_results=True,return_pos=False):
     df["std"] = df["Close"].pct_change().rolling(window=rolling_window).std().shift()
     df = df.dropna(subset=["std"])
 
@@ -14,11 +14,17 @@ def opening_gap_strategy(df: pd.DataFrame, z_entry_score=0.1, rolling_window=90)
 
     df["ret"] = (df["Close"] / df["Open"] - 1) * df["position"]
 
-    (1 + df["ret"]).cumprod().plot(label=f"Buy on Gap Strategy")
-    plt.legend()
-    plt.show()
-    print_dashed_line()
-    performance_summary(df["ret"], "Momentum Strategy", params={})
+    if show_results:
+        (1 + df["ret"]).cumprod().plot(label=f"Buy on Gap Strategy")
+        plt.legend()
+        plt.show()
+        print_dashed_line()
+        performance_summary(df["ret"], "Momentum Strategy", params={})
+    else:
+        if return_pos:
+            return df["ret"], df["positions"]
+        else:
+            return df["ret"]
 
 
 # In[ ]

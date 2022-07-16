@@ -42,7 +42,8 @@ def fill_signal_short(df, entry_score, exit_score):
     return df
 
 
-def bollinger_bands(df, long_entry, long_exit, short_entry, short_exit, window):
+def bollinger_bands(df, long_entry=-1, long_exit=-0.5, short_entry=1, short_exit=0.5, window=7, show_results=True,
+                    return_pos=False):
     """Rolling Z"""
     df["Z"] = rolling_z(df["Close"], window)
     df.dropna(how='any', inplace=True)
@@ -59,12 +60,17 @@ def bollinger_bands(df, long_entry, long_exit, short_entry, short_exit, window):
     """Strategy Return"""
     df["RT"] = (df["L"] - df["S"]) * df["R"]
 
-    (1 + df["RT"]).plot(legend="BB Returns")
-    (1 + df["R"]).plot(legend="Stock Returns")
-    print(f"APR: {get_apr(df['RT'])}, Sharpe Ratio: {get_sharpe_ratio(df['RT'])}")
-
-    plt.legend()
-    plt.show()
+    if show_results:
+        (1 + df["RT"]).plot(legend="BB Returns")
+        (1 + df["R"]).plot(legend="Stock Returns")
+        print(f"APR: {get_apr(df['RT'])}, Sharpe Ratio: {get_sharpe_ratio(df['RT'])}")
+        plt.legend()
+        plt.show()
+    else:
+        if return_pos:
+            return df["RT"], df["L"] - df["S"]
+        else:
+            return df["RT"]
 
 
 def bollinger_bands_long_short_portfolio(df, ticker_x, ticker_y, evec, long_entry, long_exit, short_entry, short_exit,
