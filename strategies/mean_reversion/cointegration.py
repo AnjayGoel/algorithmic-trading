@@ -29,7 +29,7 @@ def simple_linear_regression(df, x, y):
 
 
 def johansen_cointegration(df, ticker_one, ticker_two):
-    jres = coint_johansen(df[[ticker_one, ticker_two]], det_order=0, k_ar_diff=0)
+    jres = coint_johansen(df[[ticker_one, ticker_two]], det_order=0, k_ar_diff=1)
 
     summary = []
 
